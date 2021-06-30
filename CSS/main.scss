@@ -1,4 +1,4 @@
-.content{
+.overlay{
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
@@ -28,16 +28,19 @@
     .brand{
         position: absolute;
         top: 0;
-        left: 40.5%;
+        left: 38%;
         display: none;
-        font-size: 45px;
+        text-align: center;
+        a{
+            font-size: 45px;
+        }
     }
     .nav-overlay{
         position: absolute;
-        z-index: -1;
         top: 0;
         left: 0;
         width: 100%;
+        z-index: -1;
         height: 0;
         background-color: rgba(0,0,0,0.9);
         transition: all ease-in-out .1s;
@@ -58,8 +61,9 @@
         z-index: 500;
         color: #fff;
         top: 45%;
-        left: 40.5%;
         font-size: 45px;
+        width: 100%;
+        text-align: center;
     }
     .overlay{
         position: absolute;
@@ -89,6 +93,7 @@
             .bar {
                 width: 20px;
                 //background-image: linear-gradient(to right bottom, #e9118b, #e5006d, #dc0050, #d00235, #c01a1a);
+                //background-image: linear-gradient(to right bottom, #E8F0F2, #A2DBFA, #3EDBF0, #39A2DB, #04009A);
                 background-image: linear-gradient(to right bottom, #D7B19D, #C68B59, #7D5A50, #865439, #402218);
                 margin: 0 10px;
                 margin-bottom: 20px;
@@ -129,25 +134,19 @@
     padding-bottom: 70px;
     background-color: #000;
     color: #fff;
+    overflow: hidden;
     .card{
         background-color: transparent;
-        width: 100%;
-        height: 100%;
         a{
             display: block;
             margin-bottom: 50px;
-            &#labelsbase{
-                color: #fff;
-                padding: 65px 0 75px 0;
-                font-size: 40px;
-                text-decoration: none;
-                font-weight: bold;
-            }
-            img,span{
+
+            img{
+                width: 100%;
                 transition: all ease-in-out .6s;
             }
             &:hover{
-                img,span{
+                img{
                     -webkit-transform-origin: center ;
                     transform-origin:center ;
                     transform: rotate(720deg);
@@ -210,6 +209,7 @@
     .profile{
 
         margin-bottom: 50px;
+        display: inline-block;
         a{
             text-decoration: none;
             color: #fff;

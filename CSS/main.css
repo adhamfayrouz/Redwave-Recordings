@@ -1,4 +1,4 @@
-.content {
+.overlay {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -34,17 +34,21 @@
 .main-nav .brand {
   position: absolute;
   top: 0;
-  left: 40.5%;
+  left: 38%;
   display: none;
+  text-align: center;
+}
+
+.main-nav .brand a {
   font-size: 45px;
 }
 
 .main-nav .nav-overlay {
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
   width: 100%;
+  z-index: -1;
   height: 0;
   background-color: rgba(0, 0, 0, 0.9);
   transition: all ease-in-out .1s;
@@ -68,8 +72,9 @@
   z-index: 500;
   color: #fff;
   top: 45%;
-  left: 40.5%;
   font-size: 45px;
+  width: 100%;
+  text-align: center;
 }
 
 #mycover .overlay {
@@ -142,12 +147,11 @@
   padding-bottom: 70px;
   background-color: #000;
   color: #fff;
+  overflow: hidden;
 }
 
 .stores .card {
   background-color: transparent;
-  width: 100%;
-  height: 100%;
 }
 
 .stores .card a {
@@ -155,19 +159,12 @@
   margin-bottom: 50px;
 }
 
-.stores .card a#labelsbase {
-  color: #fff;
-  padding: 65px 0 75px 0;
-  font-size: 40px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.stores .card a img, .stores .card a span {
+.stores .card a img {
+  width: 100%;
   transition: all ease-in-out .6s;
 }
 
-.stores .card a:hover img, .stores .card a:hover span {
+.stores .card a:hover img {
   transform-origin: center;
   transform: rotate(720deg);
 }
@@ -231,6 +228,7 @@
 
 .stay-close .profile {
   margin-bottom: 50px;
+  display: inline-block;
 }
 
 .stay-close .profile a {

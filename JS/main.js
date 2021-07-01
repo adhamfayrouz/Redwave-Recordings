@@ -42,10 +42,10 @@ $(document).ready(function(){
 
     $('.music-player-toggler').click(function(){
 
-        var musicBox = $(this).parent();
+        var musicBox = $($(this).data("target"));
         if(musicBox.css('bottom') != '30px'){
             musicBox.css('bottom','30px');
-            $(this).hide();
+            $('#headphones').hide();
         }
     });
 

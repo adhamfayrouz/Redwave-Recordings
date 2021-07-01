@@ -43,10 +43,20 @@ $(document).ready(function(){
     $('.music-player-toggler').click(function(){
 
         var musicBox = $(this).parent();
-        if(musicBox.css('bottom') == '30px'){
-            musicBox.css('bottom','-350px');
-        }else{
+        if(musicBox.css('bottom') != '30px'){
             musicBox.css('bottom','30px');
+            $(this).hide();
+        }
+    });
+
+    $('body').click(function(e) 
+    {
+        var target = $(".music-box");
+        if (!target.is(e.target) && target.has(e.target).length === 0) 
+        {
+            if(target.css('bottom') == '30px'){
+                target.css('bottom','-350px').children('.music-player-toggler').show();
+            }
         }
     });
 

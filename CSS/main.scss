@@ -2,8 +2,8 @@
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.5);
-    padding-top: 50px;
-    padding-bottom: 70px;
+    padding-top: 100px;
+    padding-bottom: 140px;
 }
 .logo{
     background: url("../img/favicon.jpeg") center center no-repeat;
@@ -114,21 +114,35 @@
                     height: 60px;
                     animation: animate $timer cubic-bezier(.03,1.5,.39,1.5) infinite;
                 }
-              }
-              
-              @keyframes animate {
+            }
+
+            @keyframes animate {
                 0%, 100% {
-                  height: 250px;
+                    height: 250px;
                 }
                 
                 50% {
-                  height: 50px;
+                    height: 50px;
                 }
-              }
+            }
         }
     }
 }
+.latest{
+    background: url("../img/latest.jpg");
+    background-size: cover;
+    background-attachment: fixed;
 
+    .card{
+        color: #fff;
+        margin-bottom: 50px;
+        background: transparent;
+        border: 0;
+        ul li{
+            background: transparent;
+        }
+    }
+}
 .stores{
     padding-top: 90px;
     padding-bottom: 70px;
@@ -167,6 +181,10 @@
     background: url("../img/about.jpg") center center no-repeat;
     background-size:cover ;
     background-attachment: fixed;
+    .overlay{
+        padding-top: 100px;
+        padding-bottom: 140px;
+    }
     .about-img{ 
         padding: 0;
 
@@ -189,11 +207,14 @@
 }
 
 .submissions{
-
+    .overlay{
+        padding-top: 100px;
+        padding-bottom: 140px;
+    }
     background: url("../img/submit1.jpg") center center no-repeat;
     background-attachment: fixed;
     color: #fff;
-    h3{
+    h2{
         margin-bottom: 40px;
     }
 }
@@ -202,6 +223,10 @@
     background-image: url("../img/follow.jpg");
     background-size: cover;
     background-attachment: fixed;
+    .overlay{
+        padding-top: 50px;
+        padding-bottom: 70px;
+    }
     h2{
         text-align: center;
         margin-bottom: 60px;

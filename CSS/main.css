@@ -242,6 +242,11 @@
   margin-bottom: 40px;
 }
 
+.submissions a {
+  margin-bottom: 30px;
+  margin-right: 20px;
+}
+
 .stay-close {
   background-image: url("../img/follow.jpg");
   background-size: cover;

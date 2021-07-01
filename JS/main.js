@@ -1,9 +1,31 @@
 $(document).ready(function(){
 
+    var musicB = -300;
+    var h = 300;
+    var musicbox = $('.music-box');
     var winh = $(window).height();
     $('#mycover').height(winh);
+    if($(window).height() < 500){
+        h = 200;
+        musicB = -h;
+    }else{
+        h = 300;
+        musicB = -h;
+    }
+    musicbox.css('height',h+"px");
+    musicbox.css('bottom',musicB+'px');
+
     $(window).on('resize',function(){
         $('#mycover').height($(this).height());
+        if($(this).height() < 500){
+            h = 200;
+            musicB = -h
+        }else{
+            h = 300;
+            musicB = -h;
+        }
+        musicbox.css('height',h+"px");
+        if(musicbox.css('bottom')!="0px"){musicbox.css('bottom',musicB+'px');}
     });
 
     $(window).scroll(function(){
@@ -11,7 +33,6 @@ $(document).ready(function(){
         var hh = $('.cover-head').outerHeight();
         var wh = $(window).height();
         var ws = $(window).scrollTop();
-        var brand = $()
         if(ws >= ht){
 
             $('.cover-head .brand').hide();
@@ -42,20 +63,18 @@ $(document).ready(function(){
 
     $('.music-player-toggler').click(function(){
 
-        var musicBox = $($(this).data("target"));
-        if(musicBox.css('bottom') != '30px'){
-            musicBox.css('bottom','30px');
+        if(musicbox.css('bottom') != '0px'){
+            musicbox.css('bottom','0px');
             $('#headphones').hide();
         }
     });
-
     $('body').click(function(e) 
     {
-        var target = $(".music-box");
+        var target = musicbox;
         if (!target.is(e.target) && target.has(e.target).length === 0) 
         {
-            if(target.css('bottom') == '30px'){
-                target.css('bottom','-350px').children('.music-player-toggler').show();
+            if(target.css('bottom') == '0px'){
+                target.css('bottom',musicB+'px').children('.music-player-toggler').show();
             }
         }
     });
